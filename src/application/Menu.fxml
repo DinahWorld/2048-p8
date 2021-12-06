@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlleurMenu">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="57.0" prefWidth="600.0">
+               <children>
+                  <Circle fill="#2197ff00" radius="27.0" stroke="#fc3078" strokeType="INSIDE" strokeWidth="2.0" translateX="500.0" translateY="10.0" />
+                  <Circle fill="#2197ff00" radius="25.0" scaleX="0.5" scaleY="0.5" scaleZ="0.5" stroke="#fc3078" strokeType="INSIDE" strokeWidth="2.0" translateX="380.0" translateY="730.0" />
+               </children>
+            </HBox>
+            <Label fx:id="titre" alignment="CENTER" prefHeight="179.0" prefWidth="600.0" text="2048" translateY="60.0">
+               <font>
+                  <Font name="System Bold" size="200.0" />
+               </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.23529411852359772" green="0.29019609093666077" blue="0.8901960849761963" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007407407407407408">
+                           <color>
+                              <Color red="0.23529411852359772" green="0.29019609093666077" blue="0.8901960849761963" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.16777777777777778">
+                           <color>
+                              <Color red="0.2402999997138977" green="0.3052699863910675" blue="0.8899999856948853" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6822222222222224">
+                           <color>
+                              <Color red="0.9900000095367432" green="0.18809999525547028" blue="0.468764990568161" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9921568632125854" green="0.1882352977991104" blue="0.4588235318660736" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <HBox prefHeight="87.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="jouer" alignment="CENTER" onMouseClicked="#choixJouer" prefHeight="49.0" prefWidth="150.0" text="JOUER" textFill="#fc3078" translateX="450.0" translateY="70.0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox onMouseClicked="#choixJouer" prefHeight="213.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="quitter" alignment="CENTER" onMouseClicked="#choixQuitter" prefHeight="30.0" prefWidth="127.0" text="QUITTER" textFill="#3c4ae3" translateX="470.0" translateY="30.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="18.0" prefWidth="600.0" translateY="176.0">
+               <children>
+                  <Circle fill="#2197ff00" radius="29.0" scaleX="3.0" scaleY="3.0" scaleZ="3.0" stroke="#fc3078" strokeType="INSIDE" strokeWidth="2.0" translateX="80.0" translateY="-150.0" />
+                  <Label alignment="BOTTOM_CENTER" prefHeight="27.0" prefWidth="463.0" text="2048 par Dinath">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.24561403691768646" blue="0.9210526347160339" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5271831154823303" green="0.10000000149011612" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.util.ArrayList?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlleurGame">
+   <children>
+      <HBox fx:id="haut" prefHeight="156.0" prefWidth="800.0">
+         <children>
+            <VBox prefHeight="126.0" prefWidth="150.0">
+               <children>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="66.0" prefWidth="150.0" text="Meilleur Score" textAlignment="CENTER" textFill="#f22a70">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="meilleurScore" alignment="CENTER" prefHeight="28.0" prefWidth="150.0" text="0" textFill="#f22a70">
+                     <font>
+                        <Font name="System Bold" size="39.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="320.0">
+               <children>
+                  <Label fx:id="score" alignment="CENTER" prefHeight="120.0" prefWidth="321.0" text="Label" textAlignment="CENTER" textFill="#f22a70">
+                     <font>
+                        <Font name="System Bold" size="83.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="botScore" alignment="TOP_CENTER" prefHeight="38.0" prefWidth="348.0" text="" textFill="#f22a70">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="131.0">
+               <children>
+                  <Text fill="#f22a70" strokeType="OUTSIDE" strokeWidth="0.0" text="Appuyez sur :" textAlignment="CENTER" translateY="25.0" underline="true" wrappingWidth="129.7294921875">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="entrer" alignment="CENTER" prefHeight="83.0" prefWidth="130.0" text="ENTRER " textFill="#f22a70">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Text fill="#f22a70" strokeType="OUTSIDE" strokeWidth="0.0" text="Pour lancer une NOUVELLE PARTIE" textAlignment="CENTER" translateY="-25.0" wrappingWidth="129.7294921875" />
+                  <Label fx:id="niveau" alignment="CENTER" prefHeight="31.0" prefWidth="131.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.38371914625167847" green="0.24537037312984467" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6894888877868652" green="0.2534722089767456" blue="0.9605262875556946" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="137.0" text="Appuyez sur espace">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.38371914625167847" green="0.24537037312984467" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6894888877868652" green="0.2534722089767456" blue="0.9605262875556946" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="myAnchorPane">
+         <children>
+            <GridPane fx:id="tableauDeCase" layoutY="35.0" prefHeight="615.0" prefWidth="600.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="label00" alignment="CENTER" prefHeight="176.0" prefWidth="242.0" text="Label" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label01" alignment="CENTER" prefHeight="176.0" prefWidth="228.0" text="Label" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label02" alignment="CENTER" prefHeight="176.0" prefWidth="247.0" text="Label" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label03" alignment="CENTER" prefHeight="218.0" prefWidth="200.0" text="Label" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label10" alignment="CENTER" prefHeight="220.0" prefWidth="200.0" text="Label" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label11" alignment="CENTER" prefHeight="176.0" prefWidth="230.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label12" alignment="CENTER" prefHeight="176.0" prefWidth="245.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label13" alignment="CENTER" prefHeight="176.0" prefWidth="220.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label20" alignment="CENTER" prefHeight="207.0" prefWidth="200.0" text="Label" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label21" alignment="CENTER" prefHeight="211.0" prefWidth="200.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label22" alignment="CENTER" prefHeight="220.0" prefWidth="200.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label23" alignment="CENTER" prefHeight="176.0" prefWidth="265.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label30" alignment="CENTER" prefHeight="243.0" prefWidth="200.0" text="Label" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label31" alignment="CENTER" prefHeight="176.0" prefWidth="266.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label32" alignment="CENTER" prefHeight="176.0" prefWidth="261.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label33" alignment="CENTER" prefHeight="231.0" prefWidth="200.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+      	        <fx:define>
+      	           <ArrayList fx:id="labelArray">
+      		            <fx:reference source="label00" />
+      		            <fx:reference source="label01" />
+      		            <fx:reference source="label02" />
+      		            <fx:reference source="label03" />
+      		            <fx:reference source="label10" />
+      		            <fx:reference source="label11" />
+      		            <fx:reference source="label12" />
+      		            <fx:reference source="label13" />
+      		            <fx:reference source="label20" />
+      		            <fx:reference source="label21" />
+      		            <fx:reference source="label22" />
+      		            <fx:reference source="label23" />
+      		            <fx:reference source="label30" />
+      		            <fx:reference source="label31" />
+      		            <fx:reference source="label32" />
+      		            <fx:reference source="label33" />
+      	           </ArrayList>
+      	        </fx:define>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
