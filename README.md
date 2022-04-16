@@ -27,3 +27,10 @@
 ## Que reste-il à faire ?
 
 Rien.  
+
+
+## Screeshots
+![thumbnail_Exemple_Interface_JavaFX_1](https://user-images.githubusercontent.com/88936472/163692312-15b81dc7-c118-4fc8-b82e-db3161538174.png)
+
+![thumbnail_Exemple_Interface_JavaFX_2](https://user-images.githubusercontent.com/88936472/163692315-026604bc-13f5-467a-b210-22b983cc339e.png)
+
